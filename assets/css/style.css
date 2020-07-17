@@ -1,0 +1,32 @@
+header {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+#dashboard {padding: 20px;}
+
+#search-history {
+    width: 22rem;
+}
+
+#result-date-icon,
+#city,
+#weather-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+h4 {margin: 5px;}
+
+h6 {font-weight: 700;}
+
+#forecast-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#forecasts {margin: 10px;}
