@@ -9,7 +9,7 @@
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <!-- CSS -->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Font Awesome CDN -->
@@ -19,7 +19,7 @@
         <header>
             <h1>Weather Dashboard</h1>
         </header>
-        <div class="container-fluid">
+        <div class="container-fluid" id="dashboard">
             <div class="row">
                 <aside class="col-md-3 pl-2">
                     <div class="card">
@@ -28,14 +28,77 @@
                             <form class="form-inline">
                                 <div class="form-group">
                                     <label for=""></label>
-                                    <input type="text" id="city-search" class="form-control" placeholder="New York City" aria-describedby="helpId">
+                                    <input type="text" id="city-search" class="form-control" placeholder="New York City">
                                 </div>
-                                <button id="search" class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                <button class="btn btn-primary" id="search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </div>
                     </div>
+                    <div>
+                        <ul id="search-history" class="list-group"></ul>
+                    </div>
                 </aside>
-                <section></section>    
+                <section class="col-md-9">
+                    <div class="card" id="search-result">
+                        <div class="card-body">
+                            <div id="result-date-icon">
+                                <span id="city"></span>
+                                <span id="weather-icon"></span>
+                            </div>
+                            <p class="card-text" id="current-temp"></p>
+                            <p class="card-text" id="current-humidity"></p>
+                            <p class="card-text" id="current-wind"></p>
+                            <p class="card-text" id="current-uv"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>5-Day Forecast:</h4>
+                            <div id="forecast-results">
+                                <div class="card forecasts">
+                                    <div class="card-body" id="forecast-1">
+                                        <span class="card-title" id="forecast-day-1"></span>
+                                        <span id="forecast-icon-1"></span>
+                                        <p class="card-text" id="forecast-temp-1"></p>
+                                        <p class="card-text" id="forecast-humidity-1"></p>
+                                    </div>
+                                </div>
+                                <div class="card forecasts">
+                                    <div class="card-body" id="forecast-2">
+                                        <span class="card-title" id="forecast-day-2"></span>
+                                        <span id="forecast-icon-2"></span>
+                                        <p class="card-text" id="forecast-temp-2"></p>
+                                        <p class="card-text" id="forecast-humidity-2"></p>
+                                    </div>
+                                </div>
+                                <div class="card forecasts">
+                                    <div class="card-body" id="forecast-3">
+                                        <span class="card-title" id="forecast-day-3"></span>
+                                        <span id="forecast-icon-3"></span>
+                                        <p class="card-text" id="forecast-temp-3"></p>
+                                        <p class="card-text" id="forecast-humidity-3"></p>
+                                    </div>
+                                </div>
+                                <div class="card forecasts">
+                                    <div class="card-body" id="forecast-4">
+                                        <span class="card-title" id="forecast-day-4"></span>
+                                        <span id="forecast-icon-4"></span>
+                                        <p class="card-text" id="forecast-temp-4"></p>
+                                        <p class="card-text" id="forecast-humidity-4"></p>
+                                    </div>
+                                </div>
+                                <div class="card forecasts">
+                                    <div class="card-body" id="forecast-5">
+                                        <span class="card-title" id="forecast-day-5"></span>
+                                        <span id="forecast-icon-5"></span>
+                                        <p class="card-text" id="forecast-temp-5"></p>
+                                        <p class="card-text" id="forecast-humidity-5"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>    
             </div>            
             
 
