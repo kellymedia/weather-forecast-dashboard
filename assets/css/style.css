@@ -7,9 +7,7 @@ header {
 
 #dashboard {padding: 20px;}
 
-#search-history {
-    width: 22rem;
-}
+
 
 #result-date-icon,
 #city,
@@ -29,4 +27,4 @@ h6 {font-weight: 700;}
     justify-content: flex-start;
 }
 
-#forecasts {margin: 10px;}
+.forecasts {margin: 10px;}
