@@ -6,7 +6,7 @@
 
 This image demonstrates the app functionality:
 
-![weather dashboard demo](./assets/img/weather-forecast-dashboard-demo.png)
+![weather dashboard demo](/assets/img/weather-forecast-dashboard.png)
 
 ## Feedback
 
