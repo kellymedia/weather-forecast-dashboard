@@ -2,7 +2,7 @@
 
 This app allows the user to search for current weather conditions by city names. The users search history is stored so that they can compare the different 5-day forecast efficiently. The current conditions are displayed at the top of the results, and the 5-day forecast is displayed below it. The conditions describe current temperature, humidity, wind speed, and UV index for each result. 
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![Twitter Follow](https://img.shields.io/twitter/follow/kellydotmedia?style=social)](https://twitter.com/kellydotmedia) [![GitHub stars](https://img.shields.io/github/stars/tterb/playmusic.svg?style=social&label=Star)](https://github.com/kellymedia) [![GitHub followers](https://img.shields.io/github/followers/tterb.svg?style=social&label=Follow)](https://github.com/kellymedia)  
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![Twitter Follow](https://img.shields.io/twitter/follow/kellydotmedia?style=social)](https://twitter.com/kellydotmedia) [![GitHub stars](https://img.shields.io/github/stars/kellymedia/playmusic.svg?style=social&label=Star)](https://github.com/kellymedia/weather-forecast-dashboard/stargazers) [![GitHub followers](https://img.shields.io/github/followers/kellymedia.svg?style=social&label=Follow)](https://github.com/kellymedia)  
 
 #Code Stack
 
