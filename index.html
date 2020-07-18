@@ -28,7 +28,7 @@
                             <form class="form-inline">
                                 <div class="form-group">
                                     <label for=""></label>
-                                    <input type="text" id="city-search" class="form-control" placeholder="New York City">
+                                    <input type="text" onfocus="this.value=''" id="city-search" class="form-control" value="Newport">
                                 </div>
                                 <button class="btn btn-primary" id="search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="five-day-forecast">
                             <h4>5-Day Forecast:</h4>
                             <div id="forecast-results">
                                 <div class="card forecasts">
@@ -104,18 +104,10 @@
 
         </div>
 
-
-
-
-
-
-
-
-
         <!-- Bootstrap JS CDN -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <!-- Moments.js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
-        <script src="script.js"></script>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
