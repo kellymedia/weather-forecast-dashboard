@@ -6,11 +6,11 @@ This app allows the user to search for current weather conditions by city names.
 
 #Code Stack
 
--JavaScript
--AJAX
--[Bootstrap](https://getbootstrap.com/)
--[Moment.js](https://momentjs.com/)
--[OpenWeather API](https://openweathermap.org/api)
+- JavaScript
+- AJAX
+- [Bootstrap](https://getbootstrap.com/)
+- [Moment.js](https://momentjs.com/)
+- [OpenWeather API](https://openweathermap.org/api)
 
 
 ## Demo
