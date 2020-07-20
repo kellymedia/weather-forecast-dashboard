@@ -21,13 +21,13 @@
         </header>
         <div class="container-fluid" id="dashboard">
             <div class="row">
-                <aside class="col-md-3 pl-2">
+                <!-- Search card -->
+                <aside class="col-lg-4">
                     <div class="card">
                         <div class="card-body">
                             <h6>Search for City:</h6>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <label for=""></label>
                                     <input type="text" onfocus="this.value=''" id="city-search" class="form-control" value="Newport">
                                 </div>
                                 <button class="btn btn-primary" id="search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -38,7 +38,9 @@
                         <ul id="search-history" class="list-group"></ul>
                     </div>
                 </aside>
-                <section class="col-md-9">
+                <!-- Results card -->
+                <section class="col-lg-8">
+                    <!-- Current conditions card -->
                     <div class="card" id="search-result">
                         <div class="card-body">
                             <div id="result-date-icon">
@@ -51,49 +53,49 @@
                             <p class="card-text" id="current-uv"></p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12" id="five-day-forecast">
-                            <h4>5-Day Forecast:</h4>
-                            <div id="forecast-results">
-                                <div class="card forecasts">
-                                    <div class="card-body" id="forecast-1">
-                                        <span class="card-title" id="forecast-day-1"></span>
-                                        <span id="forecast-icon-1"></span>
-                                        <p class="card-text" id="forecast-temp-1"></p>
-                                        <p class="card-text" id="forecast-humidity-1"></p>
-                                    </div>
+                    <!-- 5-Day forecast card -->
+                    <div class="" id="five-day-forecast">
+                        
+                        <h4>5-Day Forecast:</h4>
+                        <div class="card-deck" id="forecast-results">
+                            <div class="card forecasts">
+                                <div class="card-body" id="forecast-1">
+                                    <span class="card-title" id="forecast-day-1"></span>
+                                    <span id="forecast-icon-1"></span>
+                                    <p class="card-text" id="forecast-temp-1"></p>
+                                    <p class="card-text" id="forecast-humidity-1"></p>
                                 </div>
-                                <div class="card forecasts">
-                                    <div class="card-body" id="forecast-2">
-                                        <span class="card-title" id="forecast-day-2"></span>
-                                        <span id="forecast-icon-2"></span>
-                                        <p class="card-text" id="forecast-temp-2"></p>
-                                        <p class="card-text" id="forecast-humidity-2"></p>
-                                    </div>
+                            </div>
+                            <div class="card forecasts">
+                                <div class="card-body" id="forecast-2">
+                                    <span class="card-title" id="forecast-day-2"></span>
+                                    <span id="forecast-icon-2"></span>
+                                    <p class="card-text" id="forecast-temp-2"></p>
+                                    <p class="card-text" id="forecast-humidity-2"></p>
                                 </div>
-                                <div class="card forecasts">
-                                    <div class="card-body" id="forecast-3">
-                                        <span class="card-title" id="forecast-day-3"></span>
-                                        <span id="forecast-icon-3"></span>
-                                        <p class="card-text" id="forecast-temp-3"></p>
-                                        <p class="card-text" id="forecast-humidity-3"></p>
-                                    </div>
+                            </div>
+                            <div class="card forecasts">
+                                <div class="card-body" id="forecast-3">
+                                    <span class="card-title" id="forecast-day-3"></span>
+                                    <span id="forecast-icon-3"></span>
+                                    <p class="card-text" id="forecast-temp-3"></p>
+                                    <p class="card-text" id="forecast-humidity-3"></p>
                                 </div>
-                                <div class="card forecasts">
-                                    <div class="card-body" id="forecast-4">
-                                        <span class="card-title" id="forecast-day-4"></span>
-                                        <span id="forecast-icon-4"></span>
-                                        <p class="card-text" id="forecast-temp-4"></p>
-                                        <p class="card-text" id="forecast-humidity-4"></p>
-                                    </div>
+                            </div>
+                            <div class="card forecasts">
+                                <div class="card-body" id="forecast-4">
+                                    <span class="card-title" id="forecast-day-4"></span>
+                                    <span id="forecast-icon-4"></span>
+                                    <p class="card-text" id="forecast-temp-4"></p>
+                                    <p class="card-text" id="forecast-humidity-4"></p>
                                 </div>
-                                <div class="card forecasts">
-                                    <div class="card-body" id="forecast-5">
-                                        <span class="card-title" id="forecast-day-5"></span>
-                                        <span id="forecast-icon-5"></span>
-                                        <p class="card-text" id="forecast-temp-5"></p>
-                                        <p class="card-text" id="forecast-humidity-5"></p>
-                                    </div>
+                            </div>
+                            <div class="card forecasts">
+                                <div class="card-body" id="forecast-5">
+                                    <span class="card-title" id="forecast-day-5"></span>
+                                    <span id="forecast-icon-5"></span>
+                                    <p class="card-text" id="forecast-temp-5"></p>
+                                    <p class="card-text" id="forecast-humidity-5"></p>
                                 </div>
                             </div>
                         </div>
