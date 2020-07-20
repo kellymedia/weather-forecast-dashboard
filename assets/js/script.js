@@ -1,13 +1,15 @@
+// Clear local storage to begin
 localStorage.clear();
 
+// Create search list from cities entered into input field
 function genSearchList(previousSearchList) {
     $("#search-history").empty();
-
+    // Create button out of previous cities so user can review previous cities 
     var keys = Object.keys(previousSearchList);
     for (var i = 0; i < keys.length; i++) {
         var searchListItem = $("<button>");
         searchListItem.addClass("list-group-item list-group-item-action");
-
+        //format input
         var splitString = keys[i].toLowerCase().split(" ");
         for (var k = 0; k < splitString.length; k++) {
             splitString[k] = 
@@ -23,10 +25,10 @@ function genSearchList(previousSearchList) {
 
 function renderWeatherForecast(city, previousSearchList) {
     genSearchList(previousSearchList);
-
+    // Query current weather
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?&units=imperial&appid=84128f860fec656407a57fd35e7bbe07&q=" +
     city;
-
+    //Query 5-day forecast
     var queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?&units=imperial&appid=84128f860fec656407a57fd35e7bbe07&q=" +
     city;
 
@@ -40,7 +42,7 @@ function renderWeatherForecast(city, previousSearchList) {
         console.log(currentWeather);
 
         var currentConditions = moment();
-
+        // Display date for forecast
         var renderConditions = $("<h3>");
         $("#city").empty();
         $("#city").append(
@@ -49,7 +51,7 @@ function renderWeatherForecast(city, previousSearchList) {
 
         var cityName = $("<h3>").text(currentWeather.name);
         $("#city").prepend(cityName);
-
+        // Display weather icon for card
         var conditionsIcon = $("<img>");
         conditionsIcon.attr(
             "src", "https://openweathermap.org/img/w/" + currentWeather.weather[0].icon + ".png"
@@ -63,7 +65,7 @@ function renderWeatherForecast(city, previousSearchList) {
 
         latitude = currentWeather.coord.lat;
         longitude = currentWeather.coord.lon;
-        
+        // Query UV index
         var queryURL3 =
         "https://api.openweathermap.org/data/2.5/uvi/forecast?&units=imperial&appid=84128f860fec656407a57fd35e7bbe07&q=" +
         "&lat=" +
@@ -83,7 +85,7 @@ function renderWeatherForecast(city, previousSearchList) {
         $("#current-uv").text("UV Index: ");
         $("#current-uv").append(uvIndexRender.text(uvIndex[0].value));
         console.log(uvIndex[0].value);
-
+        // Create forecast for five days ahead of current date
         $.ajax({
           url: queryURL2,
           method: "GET"
@@ -103,7 +105,7 @@ function renderWeatherForecast(city, previousSearchList) {
             $("#forecast-day-" + forecastPosition).append(
               forecastDay.text(currentConditions.add(1, "days").format("M/D/YYYY"))
             );
-
+            // Display weather icon for forecast cards.
             var forecastIcon = $("<img>");
             forecastIcon.attr(
               "src",
@@ -144,7 +146,7 @@ $(document).ready(function() {
   }
 
   genSearchList(previousSearchList);
-
+  // Hide current conditions and forecast cards to start.
   $("#search-result").hide();
   $("#five-day-forecast").hide();
 
@@ -156,21 +158,20 @@ $(document).ready(function() {
       .val()
       .trim()
       .toLowerCase();
-
+    // Display current conditions and 5-day forecast on click if search is valid.
     if (city != "") {
     
       previousSearchList[city] = true;
     localStorage.setItem("previousSearchList", JSON.stringify(previousSearchList));
 
     renderWeatherForecast(city, previousSearchList);
-
     $("#search-result").show();
     $("#five-day-forecast").show();
     }
 
     
   });
-
+  // Display current conditions and 5-day forecast if user clicks on previously searched city in search history list.
   $("#search-history").on("click", "button", function(event) {
     event.preventDefault();
     var city = $(this).text();
