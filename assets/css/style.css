@@ -1,3 +1,4 @@
+/* Main header */
 header {
     background-color: #3c3c3c;
     color: #ffffff;
@@ -7,8 +8,13 @@ header {
 
 #dashboard {padding: 20px;}
 
+/* Resize weather icons */
+img {
+    width: auto;
+    height: 8vw; 
+}
 
-
+/* force content to left */
 #result-date-icon,
 #city,
 #weather-icon {
@@ -17,10 +23,15 @@ header {
     justify-content: flex-start;
 }
 
+
 h4 {margin: 5px;}
+
+/*  Adjust font size for dates in forecast cards */
+.card-title h5 {font-size: 1.5vw !important;}
 
 h6 {font-weight: 700;}
 
+/* align and spacing for cards */
 #forecast-results {
     display: flex;
     flex-direction: row;
@@ -28,3 +39,14 @@ h6 {font-weight: 700;}
 }
 
 .forecasts {margin: 10px;}
+
+/*  Adjust text size for cards */
+.forecasts p {
+  font-size: 1.75vw;
+}
+
+/*  Adjust padding for cards */
+.card-body {
+  padding: 1.5vw;
+}
+
